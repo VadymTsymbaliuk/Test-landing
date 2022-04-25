@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="js/slick-1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="js/slick-1.8.1/slick/slick-theme.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
@@ -13,29 +11,27 @@
 <body>
 <header>
     <div class="container">
-        <div class="row py-3">
-            <div class="col">
-                <img src="" alt="logo">
-                <p>Название компании</p>
-                <span>самая кльова компанія</span>
+        <div class="title__container  row">
+            <div class="col mb-3 mb-md-0">
+                <img src="images/header_logo.svg" alt="logo">
             </div>
-            <div class="col d-flex flex-column align-items-end">
+            <div class="col container__contacts d-flex flex-column align-items-center align-items-md-end">
                 <p>+38(097)111-22-33</p>
                 <p>+38(097)111-22-33</p>
-                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Обратная
+                <a href="#" class="link-to-feedback" data-bs-toggle="modal" data-bs-target="#modal"
+                   data-bs-whatever="@getbootstrap">Обратная
                     связь</a>
             </div>
         </div>
-
     </div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+    <nav class="navbar navbar-expand-sm navbar-light bg-secondary">
         <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav d-flex w-100 justify-content-around">
+                <ul class="navbar-nav d-flex w-100 justify-content-around justify-content-sm-center ">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Головна</a>
                     </li>
@@ -61,10 +57,7 @@
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="images/slide-2.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="images/slide-2.png" class="d-block w-100" alt="...">
+                <img src="images/slide-1.png" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
                 <img src="images/slide-2.png" class="d-block w-100" alt="...">
@@ -84,15 +77,15 @@
     <div class="container">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Library</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Data</li>
+                <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                <li class="breadcrumb-item"><a href="#">Каталог</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Побутова техніка</li>
             </ol>
         </nav>
         <section class="section section-1">
             <div class="row  flex-column flex-md-row align-items-md-start align-items-center">
-                <div class="col-3">
-                    <ul class="side-bar-container mb-3 p-0">
+                <div class="col-9 col-md-3 d-flex flex-row flex-md-column justify-content-between">
+                    <ul class="side-bar-container p-0">
                         <li class="side-bar-list">
                             Автомобілі
                             <ul class="subparagraph">
@@ -102,12 +95,13 @@
                                 <li>VOLKSWAGEN</li>
                             </ul>
                         </li>
-                        <li class="side-bar-list">Побутова техніка
+                        <li class="side-bar-list active">
+                            Побутова техніка
                             <ul class="subparagraph">
-                                <li>Bosh</li>
-                                <li>Samsung</li>
-                                <li>Siemens</li>
-                                <li>LG</li>
+                                <li class="active">Мікрохвильовки</li>
+                                <li>Холодильники</li>
+                                <li>Посудомийки</li>
+                                <li>Чайники</li>
                             </ul>
                         </li>
                         <li class="side-bar-list">Мобільна техніка
@@ -142,198 +136,109 @@
                             </ul>
                         </li>
                     </ul>
-                    <div class="d-flex flex-column align-items-center">
+                    <div class="d-flex flex-column align-items-baseline">
                         <img src="images/sec-1_sidebar-img.png" alt="price">
                         <p class="text-uppercase">Прайс-лист</p>
                     </div>
 
                 </div>
                 <div class="col-9">
-                    <div class="catalog mb-5">
-                        <div class="item">
-                            <div class="card">
+                    <div class="catalog">
+                        <div class="catalog__container">
+                            <div class="card catalog__item">
                                 <img src="images/sec-2_img-2.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the
-                                        bulk
-                                        of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <p class="card-text">Самий кльовий чайник, який слід купити</p>
+                                    <div class="d-flex justify-content-between">
+                                        <p class="card-price"> 1 900 p.</p>
+                                        <a href="#" class="btn"></a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <div class="card">
+                            <div class="card catalog__item">
                                 <img src="images/sec-2_img-2.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the
-                                        bulk
-                                        of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <p class="card-text">Самий кльовий чайник, який слід купити</p>
+                                    <div class="d-flex justify-content-between">
+                                        <p class="card-price"> 1 900 p.</p>
+                                        <a href="#" class="btn"></a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <div class="card">
+                            <div class="card catalog__item">
                                 <img src="images/sec-2_img-3.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the
-                                        bulk
-                                        of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <p class="card-text">Самий кльовий чайник, який слід купити</p>
+                                    <div class="d-flex justify-content-between">
+                                        <p class="card-price"> 1 900 p.</p>
+                                        <a href="#" class="btn"></a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <div class="card">
+                            <div class="card catalog__item">
                                 <img src="images/sec-2_img-4.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the
-                                        bulk
-                                        of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <p class="card-text">Самий кльовий чайник, який слід купити</p>
+                                    <div class="d-flex justify-content-between">
+                                        <p class="card-price"> 1 900 p.</p>
+                                        <a href="#" class="btn"></a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <div class="card">
+                            <div class="card catalog__item">
                                 <img src="images/sec-2_img-5.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the
-                                        bulk
-                                        of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <p class="card-text">Самий кльовий чайник, який слід купити</p>
+                                    <div class="d-flex justify-content-between">
+                                        <p class="card-price"> 1 900 p.</p>
+                                        <a href="#" class="btn"></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="card">
-                                <img src="images/sec-2_img-6.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the
-                                        bulk
-                                        of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
+                        <div class="catalog__pagination">
+                            <div class="pagination__container">
+                                <a class="pagination__item pagination__item-active" href="#">1</a>
+                                <a class="pagination__item" href="#" aria-label="Got to page 2">2</a>
+                                <a class="pagination__item" href="#" aria-label="Got to page 3">3</a>
+                                <a class="pagination__item" href="#" aria-label="Got to page 4">4</a>
+                                <a class="pagination__item" href="#" aria-label="Got to page 5">5</a>
+                                <span class="pagination__item pagination__item-disabled">...</span>
+                                <a class="pagination__item" href="#" aria-label="Got to page 40">40</a>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="card">
-                                <img src="images/sec-1_img-2.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the
-                                        bulk
-                                        of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="card">
-                                <img src="images/sec-2_img-1.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the
-                                        bulk
-                                        of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="card">
-                                <img src="images/sec-2_img-2.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the
-                                        bulk
-                                        of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="card">
-                                <img src="images/sec-2_img-4.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the
-                                        bulk
-                                        of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="card">
-                                <img src="images/sec-2_img-5.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the
-                                        bulk
-                                        of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="card">
-                                <img src="images/sec-2_img-6.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the
-                                        bulk
-                                        of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                     <div class="text-container row flex-column flex-md-row">
                         <div class="col">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus aperiam assumenda consequuntur
-                                ducimus est expedita illo illum laudantium magnam minima nobis officia, quia, ratione reiciendis
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus aperiam assumenda
+                                consequuntur
+                                ducimus est expedita illo illum laudantium magnam minima nobis officia, quia, ratione
+                                reiciendis
                                 sapiente velit? Obcaecati, tempora.</p>
                         </div>
                         <div class="col">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate exercitationem, veritatis?
-                                Adipisci architecto commodi consectetur delectus doloribus expedita magni nam pariatur temporibus.
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate exercitationem,
+                                veritatis?
+                                Adipisci architecto commodi consectetur delectus doloribus expedita magni nam pariatur
+                                temporibus.
                                 Aliquid consectetur exercitationem libero, magnam nemo perferendis quis?</p>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
     </div>
 </main>
 <footer>
     <div class="container footer-container">
-        <div class="row">
+        <div class="row flex-column flex-sm-row ">
             <div class="col">
-                <p>© 2012–2013 ЗАО «Компания»</p>
+                <p class="mb-0">© 2012–2013 ЗАО «Компания»</p>
                 <p>info@name.ru</p>
             </div>
             <div class="col">
-                <ul>
+                <ul class="footer-list">
                     <li>
                         <a href="#">Головна</a>
                     </li>
@@ -352,9 +257,9 @@
                 </ul>
             </div>
             <div class="col">
-                <div class="">
+                <div>
                     <p>
-                        <a href="#">Розробка сайту</a> - <br>
+                        <a href="#" class="authorship">Розробка сайту</a> - <br>
                         компанія Art-sites
                     </p>
                 </div>
@@ -362,28 +267,35 @@
         </div>
     </div>
 </footer>
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+            <div class="modal-header position-relative justify-content-center">
+                <h5 class="modal-title" id="feedbackTitle">Обратная связь</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form>
-                    <div class="mb-3">
-                        <label for="recipient-name" class="col-form-label">Recipient:</label>
-                        <input type="text" class="form-control" id="recipient-name">
+                <form class="formSendFeedback">
+                    <div class="mb-3 text-center">
+                        <label for="name" class="form-label required">Ваше имя</label>
+                        <input type="text" class="form-control" id="name" placeholder="Ivan">
                     </div>
-                    <div class="mb-3">
-                        <label for="message-text" class="col-form-label">Message:</label>
-                        <textarea class="form-control" id="message-text"></textarea>
+                    <div class="mb-3 text-center">
+                        <label for="phone" class="form-label required">Телефон</label>
+                        <input type="number" class="form-control" id="phone" placeholder="380(99)9988765"
+                        >
                     </div>
+                    <div class="mb-3 text-center">
+                        <label for="email" class="form-label required">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="email@mail.com"
+                        >
+                    </div>
+                    <div class="mb-3 text-center">
+                        <label for="feedbackArea" class="form-label">Сообщение</label>
+                        <textarea class="form-control" id="feedbackArea" rows="3"></textarea>
+                    </div>
+                    <input type="submit" class="btn btn-primary btn_send">
                 </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Send message</button>
             </div>
         </div>
     </div>

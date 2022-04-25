@@ -1,45 +1,28 @@
 $(document).ready(function () {
-    $('.catalog').slick({
-        slideToShow: 6,
-        slidesToScroll: 1,
-        dots: true,
-        rows: 2,
-        slidesPerRow: 3,
-        arrows: true,
-        nextArrow: '<button type="button" class="slick-prev"></button>',
-        prevArrow: '<button type="button" class="slick-next "></button>',
-        responsive:[
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    rows: 2,
-                    slidesPerRow: 2,
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    rows: 2,
-                    slidesPerRow: 2,
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    rows: 1,
-                    slidesPerRow: 1,
-                }
-            }
-        ]
+    $('.side-bar-list').on('click', function () {
+        $(this).children().toggle()
+    })
+})
 
-    })
-    $('.side-bar-list').on('click', function (){
-        console.log($(this).children().toggle())
-    })
+const form = document.querySelector('.formSendFeedback')
+const sendBtn = document.querySelectorAll('.btn_send')
+const data = form.querySelectorAll('.form-control')
+
+const checkFieldsPresence = function (){
+    for(let i =0; i<data.length;i++){
+        if(!data[i].value){
+            console.log('field is blank', data[i])
+            data[i].setAttribute('placeholder','Поле обовʼязкове до заповнення')
+            data[i].classList.add('error-value')
+        }else {
+            console.log(data[i].value)
+            data[i].classList.remove('error-value')
+        }
+    }
+}
+
+form.addEventListener('submit', function (e){
+    e.preventDefault()
+    // removeValidation()
+    checkFieldsPresence()
 })
